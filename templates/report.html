@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Report</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Google Skill Boost Progress Report</h1>
+        <h2>Progress: {{ progress }}%</h2>
+
+        <h3>Completed Courses:</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Course</th>
+                    <th>Completion Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for course, date in completed_data %}
+                <tr>
+                    <td>{{ course }}</td>
+                    <td>{{ date }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h3>Missing Courses:</h3>
+        <ul>
+            {% for course in missing_courses %}
+            <li>{{ course }}</li>
+            {% endfor %}
+        </ul>
+
+        <a href="/">Check another profile</a>
+    </div>
+</body>
+</html>

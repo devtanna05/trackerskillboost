@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Skill Boost Progress Checker</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Google Cloud & Gen AI Course Progress Checker</h1>
+        <form action="/" method="POST">
+            <label for="profile_url">Enter Google Skill Boost Profile URL:</label>
+            <input type="text" id="profile_url" name="profile_url" required>
+            <button type="submit">Check Progress</button>
+        </form>
+
+        {% if error %}
+        <div class="error">{{ error }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
