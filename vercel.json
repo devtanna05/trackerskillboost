@@ -4,9 +4,9 @@
         {"src": "app.py", "use": "@vercel/python"}
         {
             "env": {
-      "PIP_NO_BINARY": "mysqlclient",
-      "PIP_PREFER_BINARY": "1"
-    }
+                      "PIP_NO_BINARY": "mysqlclient",
+                      "PIP_PREFER_BINARY": "1"
+                    }
         }
     ],
     "routes":[
